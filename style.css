@@ -37,9 +37,21 @@
 }
 .icon_nav_cart .bi-cart:hover,.bi-person-circle:hover{
     color:#F4A261;
-  
 }
-
+.icon_nav_cart{
+    position: relative;
+}
+.icon_nav_cart::after{
+    position: absolute;
+    content:"1";    
+    top: 5px;
+    left: 35px;
+    color: #264653;
+    font-weight: bold;
+    background-color: #F4A261;
+    border-radius: 50%;
+    padding: 0 5px;
+}
 
 
 
