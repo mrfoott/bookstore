@@ -22,6 +22,7 @@
     border: none;
     border-radius: 30px;
     outline:none;
+    outline-color: #fff;
 }
 .icon_nav_cart{
     margin-right: 20px;
