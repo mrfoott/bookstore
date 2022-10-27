@@ -1,16 +1,15 @@
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : '',
-  password : '',
-  database : 'my_db'
+// CONNECT DB
+const mysql = require('mysql');
+const connection = mysql.createPool({
+    connectionLimit : 10,
+    host     : 'localhost',
+    user     : 'root',
+    password : '',
+    database : 'bookstore'
 });
- 
-connection.connect();
- 
-connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-  if (error) throw error;
-  console.log('The solution is: ', results[0].solution);
-});
- 
-connection.end();
+connection.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+  });
+
+module.exports = connection
