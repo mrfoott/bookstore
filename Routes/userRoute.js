@@ -1,7 +1,6 @@
 const route = require("express").Router()
+const userSeed = require("../Seeds/userSeed")
 
-route.get("/", (req, res)=> {
-    res.send("hello i'm noicamlon")
-})
+route.get("/", userSeed.addUsers)
 
 module.exports = route

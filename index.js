@@ -1,12 +1,23 @@
 const express = require('express')
 const userRoute = require("./Routes/userRoute")
+const authRoute = require('./Routes/authRoute')
 require('dotenv').config();
 const app = express()
 const port = process.env.PORT || 3000
-// ROUTE
-app.get("/", userRoute)
+const cors = require('cors')
+const cookieParser = require('cookie-parser')
+app.use(cors())
+app.use(express.json())
+app.use(cookieParser())
+
+// ROUTE GET
+app.use("/", userRoute)
+
+// ROUTE POST
+app.use("/v1/auth", authRoute)
 
 
 app.listen(port, ()=> {
     console.log("Server listening on http://localhost:" + port);
 })
+
