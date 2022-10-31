@@ -1,5 +1,6 @@
 const express = require('express')
 const userRoute = require("./Routes/userRoute")
+const adminRoute = require("./Routes/adminRoute")
 const authRoute = require('./Routes/authRoute')
 require('dotenv').config();
 const app = express()
@@ -15,9 +16,9 @@ app.use("/", userRoute)
 
 // ROUTE POST
 app.use("/v1/auth", authRoute)
+app.use("/api/admin", adminRoute)
 
-
-app.listen(port, ()=> {
+app.listen(port, () => {
     console.log("Server listening on http://localhost:" + port);
 })
 
