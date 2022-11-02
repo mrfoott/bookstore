@@ -9,7 +9,7 @@ const Admin = {
                 return db.query(sql, callback)
             },
             getUserById: (id, callback)=> {
-                const sql = `SELECT * FROM user_id = '${id}'`;
+                const sql = `SELECT * FROM users WHERE user_id = ${id}`;
                 return db.query(sql, callback)
             },
         },
