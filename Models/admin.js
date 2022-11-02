@@ -15,8 +15,10 @@ const Admin = {
         },
         // POST
         POST: {
-            addUser: ()=> {
-
+            addUser: (user, callback)=> {
+                const sql = `INSERT INTO users (email, phone, address, password_hashed)
+                            VALUES ('${user.email}', '${user.phone}', '${user.address}', '${user.password_hashed}')
+                            WHERE user_id = ${id}`;
             },
         },
         // PUT
