@@ -1,4 +1,4 @@
-const db = require('../connectionDB')
+const db = require('../connectionDB');
 
 const Admin = {
     user: {
@@ -17,22 +17,34 @@ const Admin = {
         POST: {
             addUser: (user, callback)=> {
                 const sql = `INSERT INTO users (email, phone, address, password_hashed)
-                            VALUES ('${user.email}', '${user.phone}', '${user.address}', '${user.password_hashed}')
-                            WHERE user_id = ${id}`;
+                            VALUES ('${user.email}', '${user.phone}', '${user.address}', '${user.password_hashed}')`;
+                return db.query(sql, callback)
             },
         },
         // PUT
         PUT: {
-            editUserInfo: ()=>{
-
+            editUserInfo: (user, callback)=>{
+                const sql = `UPDATE users
+                            SET email = '${user.email}',
+                                phone = '${user.phone}',
+                                address = '${user.address}'
+                            WHERE user_id = ${user.user_id};`;
+                return db.query(sql, callback)
+            },
+            editPassword: (user, callback) => {
+                const sql = `UPDATE users
+                            SET password_hashed = '${user.new_password_hashed}'
+                            WHERE user_id = ${user.user_id};`;
+                return db.query(sql, callback)
             }
         }
     },
     product: {
         // GET
         GET: {
-            getAllProductInfo: ()=> {
-
+            getAllProductInfo: (callback)=> {
+                const sql = `SELECT * FROM products`;
+                return db.query(sql, callback)
             },
             getProductById: ()=> {
                 
@@ -40,15 +52,19 @@ const Admin = {
         },
         // POST
         POST: {
-            addProduct: ()=> {
-
+            addProduct: (product, callback)=> {
+                const sql = `INSERT INTO products (genres_id, product_name, quantity, language, author, description, image, price)
+                            VALUES ('${product.genres_id}', '${product.product_name}', '${product.quantity}', '${product.language}', '${product.author}', '${product.description}', '${product.image}', '${product.price}');`;
+                return db.query(sql, callback)
             },
 
         },
         // PUT
         PUT: {
-            editProductInfo: ()=>{
-
+            editProductInfo: (product, callback)=>{
+                const sql = `UPDATE products
+                            SET language = '${product.language}'
+                            WHERE product_id = ${product.product_id};`
             }
         }
     },
@@ -56,7 +72,7 @@ const Admin = {
         // GET
         GET: {
             getAllOrderInfo: ()=> {
-
+                
             },
             getOrderById: ()=> {
                 
@@ -65,7 +81,7 @@ const Admin = {
         // PUT
         PUT: {
             editOrderInfo: ()=>{
-
+                
             }
         }
     }
