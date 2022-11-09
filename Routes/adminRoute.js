@@ -6,6 +6,6 @@ const middleware = require('../middlewares/authMiddleware').verifyAccessTokenAdm
 route.get('/getalluser', middleware, adminController.getUser)
 route.get('/getuser/:id', middleware, adminController.getUserById)
 route.put('/editPasswordById/:id', middleware, adminController.updateUserPasswordById)
-
+route.post('/addUser', middleware, adminController.addUser)
 
 module.exports = route;

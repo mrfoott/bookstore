@@ -4,26 +4,30 @@ const Admin = {
     user: {
         // GET
         GET: {
-            getAllUserInfo: (callback)=> {
+            getAllUserInfo: (callback) => {
                 const sql = `SELECT * FROM users`;
                 return db.query(sql, callback)
             },
-            getUserById: (id, callback)=> {
+            getUserById: (id, callback) => {
                 const sql = `SELECT * FROM users WHERE user_id = ${id}`;
                 return db.query(sql, callback)
             },
+            findUserByEmail: (email, callback) => {
+                const sql = `SELECT * FROM users WHERE users.email = '${email}'`;
+                return db.query(sql, callback)
+            }
         },
         // POST
         POST: {
-            addUser: (user, callback)=> {
-                const sql = `INSERT INTO users (email, phone, address, password_hashed)
-                            VALUES ('${user.email}', '${user.phone}', '${user.address}', '${user.password_hashed}')`;
+            addUser: (user, callback) => {
+                const sql = `INSERT INTO users (email, full_name, phone, address, password_hashed)
+                            VALUES ('${user.email}', '${user.full_name}', '${user.phone}', '${user.address}', '${user.password_hashed}')`;
                 return db.query(sql, callback)
             },
         },
         // PUT
         PUT: {
-            editUserInfo: (user, callback)=>{
+            editUserInfo: (user, callback) => {
                 const sql = `UPDATE users
                             SET email = '${user.email}',
                                 phone = '${user.phone}',
@@ -42,17 +46,18 @@ const Admin = {
     product: {
         // GET
         GET: {
-            getAllProductInfo: (callback)=> {
+            getAllProductInfo: (callback) => {
                 const sql = `SELECT * FROM products`;
                 return db.query(sql, callback)
             },
-            getProductById: ()=> {
-                
+            getProductById: (product, callback) => {
+                const sql = `SELCT * FROM products WHERE product_id = '${product.product_id}'`;
+                return db.query(sql, callback)
             },
         },
         // POST
         POST: {
-            addProduct: (product, callback)=> {
+            addProduct: (product, callback) => {
                 const sql = `INSERT INTO products (genres_id, product_name, quantity, language, author, description, image, price)
                             VALUES ('${product.genres_id}', '${product.product_name}', '${product.quantity}', '${product.language}', '${product.author}', '${product.description}', '${product.image}', '${product.price}');`;
                 return db.query(sql, callback)
@@ -61,27 +66,28 @@ const Admin = {
         },
         // PUT
         PUT: {
-            editProductInfo: (product, callback)=>{
+            editProductInfo: (product, callback) => {
                 const sql = `UPDATE products
                             SET language = '${product.language}'
-                            WHERE product_id = ${product.product_id};`
+                            WHERE product_id = ${product.product_id}`;
+                return db.query(sql, callback)
             }
         }
     },
     order: {
         // GET
         GET: {
-            getAllOrderInfo: ()=> {
-                
+            getAllOrderInfo: () => {
+
             },
-            getOrderById: ()=> {
-                
+            getOrderById: () => {
+
             },
         },
         // PUT
         PUT: {
-            editOrderInfo: ()=>{
-                
+            editOrderInfo: () => {
+
             }
         }
     }

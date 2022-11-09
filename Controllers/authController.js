@@ -9,6 +9,7 @@ const authController = {
             const hashed = await bcrypt.hash(req.body.password, salt);
             const user = {
                 email: req.body.email,
+                full_name: req.body.full_name,
                 phone: req.body.phone,
                 address: req.body.address,
                 password_hashed: hashed
