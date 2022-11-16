@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <body>
-    <header>
-      
-     <nav class="navbar navbar-expand-sm navbar-dark ">
+  <!-- Navigation -->
+    <header>  
+     <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
         <div class="container">
           <div class="nav_left">
-            <a class="navbar-brand" href="#"><img src="" alt=""></a>
+            <a class="nav-brand" href="index.html"><img src="" alt=""></a>
           </div>
           <div class="nav_center">
             <form class="d-flex search_form">
@@ -32,7 +32,7 @@
                   <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Giỏ hàng  "><i class="bi bi-cart"></i></a>
                 </li>
                 <li class="nav-item icon_nav_user">
-                    <a class="nav-link" href="signup.html" data-toggle="tooltip" data-placement="bottom" title="Đăng nhập"><i class="bi bi-person-circle"></i></a> 
+                    <a class="nav-link" href="signin.html" data-toggle="tooltip" data-placement="bottom" title="Đăng nhập"><i class="bi bi-person-circle"></i></a> 
                 </li>
               </ul>
             </div>
@@ -43,6 +43,384 @@
         </div>
       </nav>
     </header>
-   
+    <!-- end navigation -->
+    <!-- Category -->
+    <h2 class="text-center mt-5">Category</h2>
+    <div id="category" class="container-fluid mt-5">
+        <div class="row " >
+            <!-- sidebar category -->
+            <div class="col-2 rounded-end shadow" style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+              linear-gradient(192.97deg, #2A9D8F 21.48%, #E9C46A 101.36%); padding: 0;">
+                <ul class="nav nav-tabs flex-column pt-4" role="tablist">
+                    <li class="nav-item text-center bg-warning text-white py-2">Artbook</li>
+                    <li class="nav-item " role="presentation">
+                        <a href="" id="comic" class="nav-link active" data-bs-toggle="tab" data-bs-target="#comic-content">Comic</a>
+                    </li>
+                    <li class="nav-item " role="presentation" >
+                        <a href="" id="economic" class="nav-link" data-bs-toggle="tab" data-bs-target="#economic-content">Economic</a>
+                    </li>
+                    <li class="nav-item " role="presentation" >
+                        <a href="" id="history" class="nav-link" data-bs-toggle="tab" data-bs-target="#history-content">History</a>
+                    </li>
+                    <li class="nav-item " role="presentation">
+                        <a href="" id="literature" class="nav-link" data-bs-toggle="tab" data-bs-target="#literature-content">Literature</a>
+                    </li>
+                    <li class="nav-item" role="presentation" >
+                        <a href="" id="selfhelp" class="nav-link" data-bs-toggle="tab" data-bs-target="#selfhelp-content">Self-help</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- content category -->
+            <div class="col-10 tab-content">
+                <div class="tab-pane active" id="comic-content" role="tabpanel" aria-labelledby="comic">
+                    <div class="row d-flex justify-content-center">
+                        <div class="card col-4 card_category">
+                            <img src="https://m.media-amazon.com/images/I/A118YYlCf2L.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">The world of the WITCHER</h5>
+                                <div>
+                                    <span class="card-price">825.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://m.media-amazon.com/images/I/A118YYlCf2L.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">The world of the WITCHER</h5>
+                                <div>
+                                    <span class="card-price">825.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://m.media-amazon.com/images/I/A118YYlCf2L.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">The world of the WITCHER</h5>
+                                <div>
+                                    <span class="card-price">825.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="card col-4 card_category">
+                            <img src="https://bizweb.dktcdn.net/100/355/442/files/the-witcher-3-wild-hunt-artbook-en-1.jpg?v=1561174262515" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">the WITCHER Wild Hunt</h5>
+                                <div>
+                                    <span class="card-price">4.726.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://bizweb.dktcdn.net/100/355/442/files/the-witcher-3-wild-hunt-artbook-en-1.jpg?v=1561174262515" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">the WITCHER Wild Hunt</h5>
+                                <div>
+                                    <span class="card-price">4.726.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://bizweb.dktcdn.net/100/355/442/files/the-witcher-3-wild-hunt-artbook-en-1.jpg?v=1561174262515" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">the WITCHER Wild Hunt</h5>
+                                <div>
+                                    <span class="card-price">4.726.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="economic-content" role="tabpanel" aria-labelledby="economic">
+                    <div class="row d-flex justify-content-center">
+                        <div class="card col-4 card_category">
+                            <img src="https://cdn-amz.woka.io/images/I/91f7EibIO5L.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">The world of the WITCHER</h5>
+                                <div>
+                                    <span class="card-price">825.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://cdn-amz.woka.io/images/I/91f7EibIO5L.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">The world of the WITCHER</h5>
+                                <div>
+                                    <span class="card-price">825.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://cdn-amz.woka.io/images/I/91f7EibIO5L.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">The world of the WITCHER</h5>
+                                <div>
+                                    <span class="card-price">825.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="card col-4 card_category">
+                            <img src="https://3.imimg.com/data3/FV/UI/MY-9776495/statistics-for-economics-book-500x500.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">the WITCHER Wild Hunt</h5>
+                                <div>
+                                    <span class="card-price">4.726.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://3.imimg.com/data3/FV/UI/MY-9776495/statistics-for-economics-book-500x500.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">the WITCHER Wild Hunt</h5>
+                                <div>
+                                    <span class="card-price">4.726.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://3.imimg.com/data3/FV/UI/MY-9776495/statistics-for-economics-book-500x500.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">the WITCHER Wild Hunt</h5>
+                                <div>
+                                    <span class="card-price">4.726.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="history-content" role="tabpanel" aria-labelledby="history">
+                    <div class="row d-flex justify-content-center">
+                        <div class="card col-4 card_category">
+                            <img src="https://m.media-amazon.com/images/I/517OihiR00L.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">The world of the WITCHER</h5>
+                                <div>
+                                    <span class="card-price">825.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://m.media-amazon.com/images/I/517OihiR00L.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">The world of the WITCHER</h5>
+                                <div>
+                                    <span class="card-price">825.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://m.media-amazon.com/images/I/517OihiR00L.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">The world of the WITCHER</h5>
+                                <div>
+                                    <span class="card-price">825.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="card col-4 card_category">
+                            <img src="https://www.mentorbooks.ie/wp-content/uploads/2020/11/DH-SAB-COVER.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">Discovering History Sources & Activity Book</h5>
+                                <div>
+                                    <span class="card-price">726.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://www.mentorbooks.ie/wp-content/uploads/2020/11/DH-SAB-COVER.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">Discovering History Sources & Activity Book</h5>
+                                <div>
+                                    <span class="card-price">726.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://www.mentorbooks.ie/wp-content/uploads/2020/11/DH-SAB-COVER.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">Discovering History Sources & Activity Book</h5>
+                                <div>
+                                    <span class="card-price">726.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="literature-content" role="tabpanel" aria-labelledby="literature">
+                    <div class="row d-flex justify-content-center">
+                        <div class="card col-4 card_category">
+                            <img src="https://m.media-amazon.com/images/I/51qH5xQeikL.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">Language of Literature: American Literature</h5>
+                                <div>
+                                    <span class="card-price">525.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://m.media-amazon.com/images/I/51qH5xQeikL.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">Language of Literature: American Literature</h5>
+                                <div>
+                                    <span class="card-price">525.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://m.media-amazon.com/images/I/51qH5xQeikL.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">Language of Literature: American Literature</h5>
+                                <div>
+                                    <span class="card-price">525.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="card col-4 card_category">
+                            <img src="https://sahitya.b-cdn.net/wp-content/uploads/2021/07/1881.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">CBSE Class 10 English Language and Literature text book</h5>
+                                <div>
+                                    <span class="card-price">472.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://sahitya.b-cdn.net/wp-content/uploads/2021/07/1881.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">CBSE Class 10 English Language and Literature text book</h5>
+                                <div>
+                                    <span class="card-price">472.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://sahitya.b-cdn.net/wp-content/uploads/2021/07/1881.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">CBSE Class 10 English Language and Literature text book</h5>
+                                <div>
+                                    <span class="card-price">472.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="selfhelp-content" role="tabpanel" aria-labelledby="selfhelp">
+                    <div class="row d-flex justify-content-center">
+                        <div class="card col-4 card_category">
+                            <img src="https://firstnews.com.vn/public/uploads/products/dac-nhan-tam-biamem2019-76k-bia11.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">Đắc Nhâm Tâm</h5>
+                                <div>
+                                    <span class="card-price">125.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://firstnews.com.vn/public/uploads/products/dac-nhan-tam-biamem2019-76k-bia11.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">Đắc Nhâm Tâm</h5>
+                                <div>
+                                    <span class="card-price">125.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://firstnews.com.vn/public/uploads/products/dac-nhan-tam-biamem2019-76k-bia11.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">Đắc Nhâm Tâm</h5>
+                                <div>
+                                    <span class="card-price">125.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="card col-4 card_category">
+                            <img src="https://teachvn.com/image/cache/catalog/book/day-con-lam-giau-tap-1-600x900.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">the WITCHER Wild Hunt</h5>
+                                <div>
+                                    <span class="card-price">4.726.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://teachvn.com/image/cache/catalog/book/day-con-lam-giau-tap-1-600x900.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">the WITCHER Wild Hunt</h5>
+                                <div>
+                                    <span class="card-price">4.726.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-4 card_category">
+                            <img src="https://teachvn.com/image/cache/catalog/book/day-con-lam-giau-tap-1-600x900.jpg" alt="" class="card-img-top">
+                            <div class="card-body card_body">
+                                <h5 class="card-title">the WITCHER Wild Hunt</h5>
+                                <div>
+                                    <span class="card-price">4.726.000đ</span>
+                                    <a href="" class="btn btn-warning"><i class="bi bi-cart-plus-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pagination -->
+        <div>
+            <ul class="pagination pagination-sm justify-content-center text-warning pagination_category">
+                <li class="page-item pagination_category"><a class="page-link" href="#"><i class="fa-sharp fa-solid fa-caret-left"></i></a></li>
+                <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-backward-fast"></i></a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-forward-fast"></i></a></li>
+                <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-caret-right"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- end category -->
 </body>
 </html>
