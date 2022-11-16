@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 // ROUTE GET
-app.use("/", userRoute)
+app.use("/user", userRoute)
 
 // ROUTE POST
 app.use("/v1/auth", authRoute)

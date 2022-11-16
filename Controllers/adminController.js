@@ -87,13 +87,8 @@ const adminController = {
                     res.status(200).json(result)
                 })
             })
-
-            const user = {
-                full_name: result[0].full_name,
-                email: result[0]
-            }
         } catch (error) {
-
+            res.status(500).json(error)
         }
     }
 }

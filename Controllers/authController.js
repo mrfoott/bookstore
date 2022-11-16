@@ -6,14 +6,15 @@ const authController = {
     registerUser: async (req, res) => {
         try {
             const salt = await bcrypt.genSalt(10);
-            const hashed = await bcrypt.hash(req.body.password, salt);
+            const password_hashed = await bcrypt.hash(req.body.password, salt);
             const user = {
                 email: req.body.email,
                 full_name: req.body.full_name,
                 phone: req.body.phone,
                 address: req.body.address,
-                password_hashed: hashed
+                password_hashed: password_hashed
             }
+            console.log(user)
             User.registerUser(user, (err, result) => {
                 if (err) throw err;
                 res.status(200).json(result)
@@ -25,7 +26,7 @@ const authController = {
     generateAccessToken: (user) => {
         return jwt.sign({
             id: user.id,
-            role_id: user.role_id
+            role_id: user.role_id,
         }, process.env.SECRET_KEY_ACCESSTOKEN, {
             expiresIn: "1h"
         })
